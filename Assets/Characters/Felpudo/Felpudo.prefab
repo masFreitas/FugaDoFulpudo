@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7302750561740723535}
   - component: {fileID: 9007841804352034448}
   - component: {fileID: 7697363427393888194}
+  - component: {fileID: 4946076544982549800}
+  - component: {fileID: 4145157375119218491}
   m_Layer: 0
   m_Name: Felpudo
   m_TagString: Untagged
@@ -115,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a66f51cb5c569a4aa6c6a135034ebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 0
 --- !u!50 &7697363427393888194
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +139,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &4946076544982549800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302750561740723534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3119383, y: -0.89817333}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.43, y: 5.69}
+    newSize: {x: 8.43, y: 5.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.0391436, y: 3.732185}
+  m_EdgeRadius: 0
+--- !u!61 &4145157375119218491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302750561740723534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0192747, y: 1.9174466}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.43, y: 5.69}
+    newSize: {x: 8.43, y: 5.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.233613, y: 1.8551068}
+  m_EdgeRadius: 0
