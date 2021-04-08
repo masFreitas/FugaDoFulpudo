@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FelpudoScript : MonoBehaviour
-{
-    public Text mainText;
+{    
+
     public float jumpForce;
     private bool startGame, gameOver;
     private Rigidbody2D body;
     private SpriteRenderer render;
+    private GameObject gameController;
     void Start()
     {
         this.body = GetComponent<Rigidbody2D>();
@@ -17,6 +18,8 @@ public class FelpudoScript : MonoBehaviour
         this.body.isKinematic = true;
         this.startGame = false;
         this.gameOver = false;
+
+        this.gameController = GameObject.FindGameObjectWithTag("GameController");
     }
 
     void Update()
@@ -27,8 +30,7 @@ public class FelpudoScript : MonoBehaviour
             {
                 this.startGame = true;
                 this.body.isKinematic = false;
-                this.mainText.text = string.Empty;
-
+                this.gameController.SendMessage("StartGame");
             }
             
             this.body.AddForce(new Vector2(0, this.jumpForce));
@@ -44,6 +46,7 @@ public class FelpudoScript : MonoBehaviour
         this.body.AddForce(new Vector2(-400, 400));
         this.body.AddTorque(500);
         this.render.color = new Color(1, 0.75f, 0.75f, 1);
-        this.mainText.text = "Game Over!";
+        this.gameController.SendMessage("EndGame");
+        Debug.Log(string.Format("Colidiu com {0}", other.gameObject.name));
     }
 }
